@@ -33,6 +33,7 @@ export class UsersPage {
 
   constructor(public navCtrl: NavController, private githubUsers: GithubUsers) {
     githubUsers.load().subscribe(users => {
+      
       this.users = users;
       this.originalUsers = users;
     })
@@ -40,6 +41,46 @@ export class UsersPage {
 
   goToDetails(login: string) {
     this.navCtrl.push(UserDetailsPage, {login});
+  }
+
+  load2(){
+    var since = this.users.length;
+    this.githubUsers.load2(since).subscribe(users => {
+      for (let x of users){
+
+        this.users.unshift(x);
+      }
+      });
+  }
+
+   load3(){
+    this.githubUsers.load2(20).subscribe(users => {
+      for (let x of users){
+
+        this.users.push(x);
+      }
+      });
+  }
+
+    doRefresh(refresher) {
+      this.load2();
+    console.log('Begin async operation', refresher);
+
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      refresher.complete();
+    }, 2000);
+  }
+
+    doInfinite(infiniteScroll) {
+    console.log('Begin async operation');
+
+    setTimeout(() => {
+       this.load3();
+
+      console.log('Async operation has ended');
+      infiniteScroll.complete();
+    }, 2000);
   }
 
   search(searchEvent) {

@@ -18,6 +18,11 @@ export class GithubUsers {
       .map(res => <User[]>res.json());
   }
 
+   load2(since: number): Observable<User[]> {
+    return this.http.get(`https://api.github.com/users?since=${since}`)
+      .map(res => <User[]>res.json());
+  }
+
   // Get github user by providing login(username)
   loadDetails(login: string): Observable<User> {
     return this.http.get(`${this.githubApiUrl}/users/${login}`)
