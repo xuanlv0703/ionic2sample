@@ -1,10 +1,35 @@
-<ion-content class="login-content" padding>
+<ion-content [class]="cContent" padding>
+
   <ion-row class="top-row">
     <ion-col>
       <h1 class="label-logo">LOGO</h1>
-      <p class="label-description">This app helps you discover and buy amazing things all in one place</p>
     </ion-col>
   </ion-row>
+
+  <ion-row class="center-row">
+        <ion-slides #mySlider (ionDidChange)="onSlideChanged()" [options]="{pager:true,autoplay:2000,speed:300}" style="max-height:400px">
+  <ion-slide>
+         <p class="label-description1">This app helps you discover and buy amazing things all in one place</p>
+  </ion-slide>
+  <ion-slide>
+          <p class="label-description2">This app helps you discover and buy amazing things all in one place</p>
+  </ion-slide>
+  <ion-slide>
+         <p class="label-description3">This app helps you discover and buy amazing things all in one place</p>
+  </ion-slide>
+   <ion-slide>
+         <p class="label-description3">This app helps you discover and buy amazing things all in one place</p>
+  </ion-slide>
+</ion-slides>
+  </ion-row>
+  
+    <!-- <video autoplay muted loop webkit-playsinline requestFullScreen id="bgvid">
+    
+   <source src="assets/img/movie.ogg" type="video/ogg">
+        <source src="assets/img/movie.mp4" type="video/mp4">
+    
+    </video> -->
+
   <ion-row class="bottom-row">
     <ion-col class="login-button">
       <button ion-button block (click)="doFbLogin()">Facebook Login</button>

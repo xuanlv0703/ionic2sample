@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component,ViewChild } from '@angular/core';
 import { Facebook, NativeStorage } from 'ionic-native';
-import { NavController } from 'ionic-angular';
+import { NavController,Slides } from 'ionic-angular';
 import { UsersPage } from '../users/users';
 import { ReposPage } from '../repos/repos';
 
@@ -9,10 +9,23 @@ import { ReposPage } from '../repos/repos';
   templateUrl: 'login.html',
 })
 export class LoginPage {
+  @ViewChild('mySlider') slider: Slides;
   FB_APP_ID: number = 340592482989316;
+  cContent: string = 'login-content1';
   constructor(public navCtrl: NavController) {
     Facebook.browserInit(this.FB_APP_ID, "v2.8");
     console.log('cons...');
+  }
+
+  ionViewDidEnter() {
+    console.log('abc')
+    
+  }
+
+  onSlideChanged() {
+
+    let currentIndex = this.slider.getActiveIndex();
+    this.cContent = 'login-content'+currentIndex;
   }
 
   doFbLogin(){

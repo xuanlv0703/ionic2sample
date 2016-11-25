@@ -1,8 +1,24 @@
 page-login {
 
-  .login-content{
-    background-color: #FF6347;
+  .login-content0{
+    background: url(../assets/img/slider1.jpg) no-repeat;
   }
+   .login-content1{
+    background: url(../assets/img/slider2.jpg) no-repeat;
+  }
+  .login-content2{
+    background: url(../assets/img/slider3.jpg) no-repeat;
+  }
+    .login-content3{
+    background: url(../assets/img/slider4.jpg) no-repeat;
+  }
+ 
+
+  #bgvid {
+
+position: fixed; right: 0; bottom: 0;min-width: 100%; min-height: 100%;width: auto; height: auto; z-index: -100;background-size: cover;
+
+}
 
   .label-logo{
     color: white;
@@ -12,19 +28,51 @@ page-login {
     padding-top: 50px;
   }
 
-  .label-description{
+  .label-description1{
+    color: white;
+    font-size: 130%;
+    text-align: center;
+  }
+
+   .label-description2{
+    color: white;
+    font-size: 130%;
+    text-align: center;
+  }
+
+   .label-description3{
+    color: white;
+    font-size: 130%;
+    text-align: center;
+  }
+
+    .label-slider{
     color: white;
     font-size: 130%;
     text-align: center;
   }
 
   .top-row{
-    height: 80%;
+    height: 20%;
+  }
+    .center-row{
+    height: 60%;
   }
 
   .bottom-row{
     height: 20%;
 
   }
+ .scroll-content {
+       overflow: hidden;
+    }
+
+     .swiper-pagination-bullet {
+        opacity: 1;
+        background: white;
+    }
+    .swiper-pagination-bullet-active {
+        background: #387EF5;
+    }
 
 }
