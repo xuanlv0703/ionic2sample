@@ -21,6 +21,13 @@ export class UsersPage {
     })
   }
 
+   ionViewDidEnter() {
+    let elem = <HTMLElement>document.querySelector(".tabbar");
+    if (elem != null) {
+      elem.style.display = 'flex';
+    }
+  }
+
   goToDetails(login: string) {
     this.navCtrl.push(UserDetailsPage, {login});
   }

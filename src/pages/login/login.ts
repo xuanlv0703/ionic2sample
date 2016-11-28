@@ -4,6 +4,7 @@ import { NavController,Slides } from 'ionic-angular';
 import { UsersPage } from '../users/users';
 import { ReposPage } from '../repos/repos';
 
+
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html',
@@ -17,9 +18,11 @@ export class LoginPage {
     console.log('cons...');
   }
 
-  ionViewDidEnter() {
-    console.log('abc')
-    
+ ionViewDidEnter() {
+    let elem = <HTMLElement>document.querySelector(".tabbar");
+    if (elem != null) {
+      elem.style.display = 'none';
+    }
   }
 
   onSlideChanged() {

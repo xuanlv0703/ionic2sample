@@ -10,6 +10,7 @@ import { ProfilePage } from '../pages/profile/profile';
 import { UsersPage } from '../pages/users/users';
 import { ReposPage } from '../pages/repos/repos';
 import { OrganisationsPage } from '../pages/organisations/organisations';
+import { TabsPage } from '../pages/tabs/tabs';
 
 @Component({
   templateUrl: 'app.html'
@@ -18,7 +19,7 @@ export class MyApp {
  @ViewChild(Nav) nav: Nav;
 
   // make UsersPage the root (or first) page
-  rootPage: any;
+  rootPage: any = TabsPage;
   pages: Array<{title: string, component: any}>;
 
   constructor(public platform: Platform,  public menu: MenuController) {
@@ -28,7 +29,9 @@ export class MyApp {
       { title: 'Profile', component: ProfilePage },
       { title: 'Organisations', component: OrganisationsPage }
     ];
-    this.initializeApp();
+    // this.initializeApp();
+    StatusBar.styleDefault();
+    Splashscreen.hide();
 
   
   }

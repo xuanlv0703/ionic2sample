@@ -10,6 +10,7 @@ import { OrganisationsPage } from '../pages/organisations/organisations';
 
 import { GithubUsers } from '../providers/github-users';
 import {UserDetailsPage } from '../pages/user-details/user-details';
+import { TabsPage } from '../pages/tabs/tabs';
 
 @NgModule({
   declarations: [
@@ -19,10 +20,11 @@ import {UserDetailsPage } from '../pages/user-details/user-details';
     UsersPage,
     ReposPage,
     OrganisationsPage,
-    UserDetailsPage
+    UserDetailsPage,
+    TabsPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp,{tabsPlacement:'top'})
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -32,7 +34,8 @@ import {UserDetailsPage } from '../pages/user-details/user-details';
     UsersPage,
     ReposPage,
     OrganisationsPage,
-    UserDetailsPage
+    UserDetailsPage,
+    TabsPage
   ],
   providers: [GithubUsers]
 })
