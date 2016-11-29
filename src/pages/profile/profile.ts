@@ -49,6 +49,10 @@ export class ProfilePage {
     });
   }
 
+  doGuestLogout(){
+    this.navCtrl.setRoot(LoginPage);
+  }
+
   doFbLogout(){
     var nav = this.navCtrl;
     Facebook.logout()

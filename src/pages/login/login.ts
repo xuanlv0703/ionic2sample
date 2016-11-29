@@ -3,6 +3,7 @@ import { Facebook, NativeStorage } from 'ionic-native';
 import { NavController,Slides } from 'ionic-angular';
 import { UsersPage } from '../users/users';
 import { ReposPage } from '../repos/repos';
+import { TabsPage } from '../tabs/tabs';
 
 
 @Component({
@@ -13,22 +14,36 @@ export class LoginPage {
   @ViewChild('mySlider') slider: Slides;
   FB_APP_ID: number = 340592482989316;
   cContent: string = 'login-content1';
+  tabBarElement: any;
   constructor(public navCtrl: NavController) {
+    this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
     Facebook.browserInit(this.FB_APP_ID, "v2.8");
     console.log('cons...');
   }
 
- ionViewDidEnter() {
-    let elem = <HTMLElement>document.querySelector(".tabbar");
-    if (elem != null) {
-      elem.style.display = 'none';
-    }
-  }
+ // ionViewDidEnter() {
+ //    let elem = <HTMLElement>document.querySelector(".tabbar");
+ //    if (elem != null) {
+ //      elem.style.display = 'none';
+ //    }
+ //  }
+
+  //  ionViewWillEnter() {
+  //   this.tabBarElement.style.display = 'none';
+  // }
+
+  // ionViewWillLeave() {
+  //   this.tabBarElement.style.display = 'flex';
+  // }
 
   onSlideChanged() {
 
     let currentIndex = this.slider.getActiveIndex();
     this.cContent = 'login-content'+currentIndex;
+  }
+
+  doGuestLogin(){
+    this.navCtrl.setRoot(TabsPage);
   }
 
   doFbLogin(){
@@ -55,7 +70,7 @@ export class LoginPage {
         })
         .then(function(){
           console.log('da save data login.')
-          nav.setRoot(UsersPage);
+          nav.setRoot(TabsPage);
         }, function (error) {
           console.log(error);
         })

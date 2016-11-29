@@ -12,6 +12,8 @@ import { GithubUsers } from '../providers/github-users';
 import {UserDetailsPage } from '../pages/user-details/user-details';
 import { TabsPage } from '../pages/tabs/tabs';
 
+import { MorePage } from '../pages/more/more';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -21,6 +23,7 @@ import { TabsPage } from '../pages/tabs/tabs';
     ReposPage,
     OrganisationsPage,
     UserDetailsPage,
+    MorePage,
     TabsPage
   ],
   imports: [
@@ -35,6 +38,7 @@ import { TabsPage } from '../pages/tabs/tabs';
     ReposPage,
     OrganisationsPage,
     UserDetailsPage,
+    MorePage,
     TabsPage
   ],
   providers: [GithubUsers]

@@ -19,7 +19,7 @@ export class MyApp {
  @ViewChild(Nav) nav: Nav;
 
   // make UsersPage the root (or first) page
-  rootPage: any = TabsPage;
+  rootPage: any;
   pages: Array<{title: string, component: any}>;
 
   constructor(public platform: Platform,  public menu: MenuController) {
@@ -29,9 +29,9 @@ export class MyApp {
       { title: 'Profile', component: ProfilePage },
       { title: 'Organisations', component: OrganisationsPage }
     ];
-    // this.initializeApp();
-    StatusBar.styleDefault();
-    Splashscreen.hide();
+    this.initializeApp();
+    // StatusBar.styleDefault();
+    // Splashscreen.hide();
 
   
   }
@@ -51,7 +51,7 @@ export class MyApp {
         // user is previously logged and we have his data
         // we will let him access the app
         // env.nav.push(UsersPage);
-        env.rootPage = UsersPage;
+        env.rootPage = TabsPage;
         Splashscreen.hide();
       }, function (error) {
         console.log('ko data')
