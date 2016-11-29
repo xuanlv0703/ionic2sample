@@ -22,12 +22,12 @@ export class UserDetailsPage {
     })
   }
 
- ionViewDidEnter() {
-    let elem = <HTMLElement>document.querySelector(".tabbar");
-    if (elem != null) {
-      elem.style.display = 'none';
-    }
-  }
+ // ionViewDidEnter() {
+ //    let elem = <HTMLElement>document.querySelector(".tabbar");
+ //    if (elem != null) {
+ //      elem.style.display = 'none';
+ //    }
+ //  }
  
   // ionViewWillEnter() {
   //   this.tabBarElement.style.display = 'none';

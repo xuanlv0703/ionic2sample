@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { App, NavController } from 'ionic-angular';
 
 import { ProfilePage } from '../profile/profile';
 import { LoginPage } from '../login/login';
@@ -15,20 +15,24 @@ import { LoginPage } from '../login/login';
   templateUrl: 'more.html'
 })
 export class MorePage {
+   rootPage: any;
 
-  constructor(public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController, public appCtrl: App) {}
 
   ionViewDidLoad() {
     console.log('Hello MorePage Page');
   }
 
   profile() {
-    this.navCtrl.setRoot(ProfilePage);
+    // this.navCtrl.setRoot(ProfilePage);
+    this.appCtrl.getRootNav().push(ProfilePage);
   }
 
 
   logout(){
-    this.navCtrl.setRoot(LoginPage);
+    var nav = this.navCtrl;
+    // nav.setRoot(LoginPage);
+     this.appCtrl.getRootNav().push(LoginPage);
   }
 
   // support() {
