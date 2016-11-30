@@ -1,3 +1,29 @@
 page-setmenu {
+    .label-description {
+        color: black;
+        font-size: 100%;
+        text-align: center;
+    }
+    .label-price {
+        padding-bottom: 20px;
+        padding-top: 0px;
+    }
+    .ion-title {
+        text-align: center;
+    }
+    .scroll-content {
+        overflow: overlay;
+    }
 
+    .label-left {
+    	text-align: left;
+    }
+
+   .vertical{
+	   width: 0px;
+	   height: 100%; /* or height in PX */
+	} 
+	.swiper-pagination{
+		bottom: 10px !important;
+	}
 }
