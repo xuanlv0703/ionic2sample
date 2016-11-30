@@ -19,4 +19,8 @@ export class SetmenuPage {
     console.log('Hello SetmenuPage Page');
   }
 
+    onSlideChanged() {
+    	console.log('slider change.')
+  }
+
 }
