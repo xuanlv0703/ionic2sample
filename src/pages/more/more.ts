@@ -18,7 +18,6 @@ export class MorePage {
    rootPage: any;
 
   constructor(public navCtrl: NavController, public appCtrl: App) {}
-
   ionViewDidLoad() {
     console.log('Hello MorePage Page');
   }

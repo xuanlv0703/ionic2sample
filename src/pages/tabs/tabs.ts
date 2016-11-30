@@ -6,6 +6,7 @@ import { ReposPage } from '../repos/repos';
 import { OrganisationsPage } from '../organisations/organisations';
 import { LoginPage } from '../login/login';
 import { MorePage } from '../more/more';
+import { HomePage } from '../home/home';
 
 /*
   Generated class for the Tabs page.
@@ -19,10 +20,10 @@ import { MorePage } from '../more/more';
 })
 export class TabsPage {
 
-  tab1Root: any = UsersPage;
+  tab1Root: any = HomePage;
 
   tab2Root: any = ReposPage;
-  tab3Root: any = OrganisationsPage;
+  tab3Root: any = UsersPage;
   tab4Root: any = MorePage;
 
   // constructor(public navCtrl: NavController) {}

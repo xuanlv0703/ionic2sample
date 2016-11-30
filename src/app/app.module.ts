@@ -13,6 +13,10 @@ import {UserDetailsPage } from '../pages/user-details/user-details';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { MorePage } from '../pages/more/more';
+import { SetmenuPage } from '../pages/setmenu/setmenu';
+import { DishPage } from '../pages/dish/dish';
+import { ProductPage } from '../pages/product/product';
+import { HomePage } from '../pages/home/home';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { MorePage } from '../pages/more/more';
     OrganisationsPage,
     UserDetailsPage,
     MorePage,
-    TabsPage
+    TabsPage,
+    SetmenuPage,
+    DishPage,
+    ProductPage,
+    HomePage
   ],
   imports: [
     IonicModule.forRoot(MyApp,{tabsPlacement:'top'})
@@ -39,7 +47,11 @@ import { MorePage } from '../pages/more/more';
     OrganisationsPage,
     UserDetailsPage,
     MorePage,
-    TabsPage
+    TabsPage,
+    SetmenuPage,
+    DishPage,
+    ProductPage,
+    HomePage
   ],
   providers: [GithubUsers]
 })
