@@ -26,4 +26,18 @@ page-setmenu {
 	.swiper-pagination{
 		bottom: 10px !important;
 	}
+
+    .full-width-img{
+        width: 100%;
+    }
+    .fix-card {
+        width: 100%;
+        margin-left: -10px;
+        text-align: center;
+        min-height: 250px;
+    }
+    .fix-all-cate{
+        margin-top: 90px;
+    }
+   
 }
