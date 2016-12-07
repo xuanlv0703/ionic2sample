@@ -1,3 +1,44 @@
 page-product {
+    .label-description {
+        color: black;
+        font-size: 100%;
+        text-align: center;
+    }
+    .label-price {
+        padding-bottom: 20px;
+        padding-top: 0px;
+    }
+    .ion-title {
+        text-align: center;
+    }
+    .scroll-content {
+        overflow: overlay;
+    }
 
+    .label-left {
+    	text-align: left;
+    }
+
+   .vertical{
+	   width: 0px;
+	   height: 100%; /* or height in PX */
+	} 
+	.swiper-pagination{
+		bottom: 10px !important;
+	}
+
+    .full-width-img{
+        width: 100%;
+    }
+    .fix-card {
+        width: 100%;
+        margin-left: -10px;
+        text-align: center;
+        min-height: 250px;
+    }
+    .fix-all-cate{
+        margin-top: 90px;
+    }
+   
 }
+
