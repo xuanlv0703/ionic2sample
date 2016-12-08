@@ -3,7 +3,6 @@ import { NavController, NavParams } from 'ionic-angular';
 
 import { UsersPage } from '../users/users';
 import { OrganisationsPage } from '../organisations/organisations';
-import { LoginPage } from '../login/login';
 import { MorePage } from '../more/more';
 @Component({
   selector: 'page-repos',

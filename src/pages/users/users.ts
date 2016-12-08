@@ -5,7 +5,6 @@ import { User } from '../../models/user';
 
 import {  GithubUsers } from '../../providers/github-users';
 import { UserDetailsPage } from '../user-details/user-details';
-import { LoginPage } from '../login/login';
 @Component({
   selector: 'page-users',
   templateUrl: 'users.html'

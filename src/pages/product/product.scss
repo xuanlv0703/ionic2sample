@@ -30,11 +30,20 @@ page-product {
     .full-width-img{
         width: 100%;
     }
-    .fix-card {
+    .fix-card-left {
         width: 100%;
+        margin-left: -18px;
+        text-align: center;
+        min-height: 250px;
+        min-width: 175px;
+    }
+      .fix-card-right {
+        width: 100%;
+        margin-right: -10px;
         margin-left: -10px;
         text-align: center;
         min-height: 250px;
+        min-width: 175px;
     }
     .fix-all-cate{
         margin-top: 90px;

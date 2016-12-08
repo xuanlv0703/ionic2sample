@@ -3,8 +3,6 @@ import { NavController, NavParams } from 'ionic-angular';
 
 import { UsersPage } from '../users/users';
 import { ReposPage } from '../repos/repos';
-import { OrganisationsPage } from '../organisations/organisations';
-import { LoginPage } from '../login/login';
 import { MorePage } from '../more/more';
 import { HomePage } from '../home/home';
 

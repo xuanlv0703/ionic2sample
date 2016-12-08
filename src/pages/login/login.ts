@@ -1,8 +1,6 @@
 import { Component,ViewChild } from '@angular/core';
 import { Facebook, NativeStorage } from 'ionic-native';
 import { NavController,Slides } from 'ionic-angular';
-import { UsersPage } from '../users/users';
-import { ReposPage } from '../repos/repos';
 import { TabsPage } from '../tabs/tabs';
 
 
