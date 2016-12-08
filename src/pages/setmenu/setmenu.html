@@ -18,7 +18,7 @@
     <ion-row class="center-row">
         <ion-slides #mySlider (ionDidChange)="onSlideChanged()" [options]="{pager:true,speed:300}" style="max-height:400px">
             <ion-slide>
-                <ion-card>
+                <ion-card (click)="goDetail()">
                     <img src="http://lorempixel.com/300/200/food/" class="full-width-img">
                     <ion-card-content>
                         <ion-card-title>
@@ -31,7 +31,7 @@
                 </ion-card>
             </ion-slide>
             <ion-slide>
-                <ion-card>
+                <ion-card (click)="goDetail()">
                     <img src="http://lorempixel.com/300/200/food/" class="full-width-img">
                     <ion-card-content>
                         <ion-card-title>
@@ -44,7 +44,7 @@
                 </ion-card>
             </ion-slide>
             <ion-slide>
-                <ion-card>
+                <ion-card (click)="goDetail()">
                     <img src="http://lorempixel.com/300/200/food/" class="full-width-img">
                     <ion-card-content>
                         <ion-card-title>
@@ -57,7 +57,7 @@
                 </ion-card>
             </ion-slide>
             <ion-slide>
-                <ion-card>
+                <ion-card (click)="goDetail()">
                     <img src="http://lorempixel.com/300/200/food/" class="full-width-img">
                     <ion-card-content>
                         <ion-card-title>
@@ -76,7 +76,7 @@
     <hr>
     <ion-row>
         <ion-col width-50>
-            <ion-card class="fix-card">
+            <ion-card class="fix-card" (click)="goDetail()">
                 <img src="http://lorempixel.com/300/200/food/">
                 <ion-card-content>
                     <ion-card-title>
@@ -89,36 +89,7 @@
             </ion-card>
         </ion-col>
         <ion-col width-50>
-            <ion-card class="fix-card">
-                <img src="http://lorempixel.com/300/200/food/">
-                <ion-card-content>
-                    <ion-card-title>
-                        150k
-                    </ion-card-title>
-                    <p>
-                        The most popular industrial group ever
-                    </p>
-                </ion-card-content>
-            </ion-card>
-        </ion-col>
-    </ion-row>
-    <!-- <hr> -->
-    <ion-row>
-        <ion-col width-50>
-            <ion-card class="fix-card">
-                <img src="http://lorempixel.com/300/200/food/">
-                <ion-card-content>
-                    <ion-card-title>
-                        150k
-                    </ion-card-title>
-                    <p>
-                        The most popular industrial group ever
-                    </p>
-                </ion-card-content>
-            </ion-card>
-        </ion-col>
-        <ion-col width-50>
-            <ion-card class="fix-card">
+            <ion-card class="fix-card" (click)="goDetail()">
                 <img src="http://lorempixel.com/300/200/food/">
                 <ion-card-content>
                     <ion-card-title>
@@ -134,7 +105,7 @@
     <!-- <hr> -->
     <ion-row>
         <ion-col width-50>
-            <ion-card class="fix-card">
+            <ion-card class="fix-card" (click)="goDetail()">
                 <img src="http://lorempixel.com/300/200/food/">
                 <ion-card-content>
                     <ion-card-title>
@@ -147,7 +118,36 @@
             </ion-card>
         </ion-col>
         <ion-col width-50>
-          <ion-card class="fix-card">
+            <ion-card class="fix-card" (click)="goDetail()">
+                <img src="http://lorempixel.com/300/200/food/">
+                <ion-card-content>
+                    <ion-card-title>
+                        150k
+                    </ion-card-title>
+                    <p>
+                        The most popular industrial group ever
+                    </p>
+                </ion-card-content>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+    <!-- <hr> -->
+    <ion-row>
+        <ion-col width-50>
+            <ion-card class="fix-card" (click)="goDetail()">
+                <img src="http://lorempixel.com/300/200/food/">
+                <ion-card-content>
+                    <ion-card-title>
+                        150k
+                    </ion-card-title>
+                    <p>
+                        The most popular industrial group ever
+                    </p>
+                </ion-card-content>
+            </ion-card>
+        </ion-col>
+        <ion-col width-50>
+          <ion-card class="fix-card" (click)="goDetail()">
                 <ion-card-content>
                     <ion-card-title class="fix-all-cate">
                         ALL
@@ -161,7 +161,7 @@
     <hr>
     <ion-row>
         <ion-col width-50>
-            <ion-card class="fix-card">
+            <ion-card class="fix-card" (click)="goDetail()">
                 <img src="http://lorempixel.com/300/200/food/">
                 <ion-card-content>
                     <ion-card-title>
@@ -174,36 +174,7 @@
             </ion-card>
         </ion-col>
         <ion-col width-50>
-            <ion-card class="fix-card">
-                <img src="http://lorempixel.com/300/200/food/">
-                <ion-card-content>
-                    <ion-card-title>
-                        150k
-                    </ion-card-title>
-                    <p>
-                        The most popular industrial group ever
-                    </p>
-                </ion-card-content>
-            </ion-card>
-        </ion-col>
-    </ion-row>
-    <!-- <hr> -->
-    <ion-row>
-        <ion-col width-50>
-            <ion-card class="fix-card">
-                <img src="http://lorempixel.com/300/200/food/">
-                <ion-card-content>
-                    <ion-card-title>
-                        150k
-                    </ion-card-title>
-                    <p>
-                        The most popular industrial group ever
-                    </p>
-                </ion-card-content>
-            </ion-card>
-        </ion-col>
-        <ion-col width-50>
-            <ion-card class="fix-card">
+            <ion-card class="fix-card" (click)="goDetail()">
                 <img src="http://lorempixel.com/300/200/food/">
                 <ion-card-content>
                     <ion-card-title>
@@ -219,7 +190,7 @@
     <!-- <hr> -->
     <ion-row>
         <ion-col width-50>
-            <ion-card class="fix-card">
+            <ion-card class="fix-card" (click)="goDetail()">
                 <img src="http://lorempixel.com/300/200/food/">
                 <ion-card-content>
                     <ion-card-title>
@@ -232,7 +203,36 @@
             </ion-card>
         </ion-col>
         <ion-col width-50>
-         <ion-card class="fix-card">
+            <ion-card class="fix-card" (click)="goDetail()">
+                <img src="http://lorempixel.com/300/200/food/">
+                <ion-card-content>
+                    <ion-card-title>
+                        150k
+                    </ion-card-title>
+                    <p>
+                        The most popular industrial group ever
+                    </p>
+                </ion-card-content>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+    <!-- <hr> -->
+    <ion-row>
+        <ion-col width-50>
+            <ion-card class="fix-card" (click)="goDetail()">
+                <img src="http://lorempixel.com/300/200/food/">
+                <ion-card-content>
+                    <ion-card-title>
+                        150k
+                    </ion-card-title>
+                    <p>
+                        The most popular industrial group ever
+                    </p>
+                </ion-card-content>
+            </ion-card>
+        </ion-col>
+        <ion-col width-50>
+         <ion-card class="fix-card" (click)="goDetail()">
                 <ion-card-content>
                     <ion-card-title class="fix-all-cate">
                         ALL
@@ -246,7 +246,7 @@
     <hr>
     <ion-row>
         <ion-col width-50>
-            <ion-card class="fix-card">
+            <ion-card class="fix-card" (click)="goDetail()">
                 <img src="http://lorempixel.com/300/200/food/">
                 <ion-card-content>
                     <ion-card-title>
@@ -259,36 +259,7 @@
             </ion-card>
         </ion-col>
         <ion-col width-50>
-            <ion-card class="fix-card">
-                <img src="http://lorempixel.com/300/200/food/">
-                <ion-card-content>
-                    <ion-card-title>
-                        150k
-                    </ion-card-title>
-                    <p>
-                        The most popular industrial group ever
-                    </p>
-                </ion-card-content>
-            </ion-card>
-        </ion-col>
-    </ion-row>
-    <!-- <hr> -->
-    <ion-row>
-        <ion-col width-50>
-            <ion-card class="fix-card">
-                <img src="http://lorempixel.com/300/200/food/">
-                <ion-card-content>
-                    <ion-card-title>
-                        150k
-                    </ion-card-title>
-                    <p>
-                        The most popular industrial group ever
-                    </p>
-                </ion-card-content>
-            </ion-card>
-        </ion-col>
-        <ion-col width-50>
-            <ion-card class="fix-card">
+            <ion-card class="fix-card" (click)="goDetail()">
                 <img src="http://lorempixel.com/300/200/food/">
                 <ion-card-content>
                     <ion-card-title>
@@ -304,7 +275,7 @@
     <!-- <hr> -->
     <ion-row>
         <ion-col width-50>
-            <ion-card class="fix-card">
+            <ion-card class="fix-card" (click)="goDetail()">
                 <img src="http://lorempixel.com/300/200/food/">
                 <ion-card-content>
                     <ion-card-title>
@@ -317,7 +288,36 @@
             </ion-card>
         </ion-col>
         <ion-col width-50>
-           <ion-card class="fix-card">
+            <ion-card class="fix-card" (click)="goDetail()">
+                <img src="http://lorempixel.com/300/200/food/">
+                <ion-card-content>
+                    <ion-card-title>
+                        150k
+                    </ion-card-title>
+                    <p>
+                        The most popular industrial group ever
+                    </p>
+                </ion-card-content>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+    <!-- <hr> -->
+    <ion-row>
+        <ion-col width-50>
+            <ion-card class="fix-card" (click)="goDetail()">
+                <img src="http://lorempixel.com/300/200/food/">
+                <ion-card-content>
+                    <ion-card-title>
+                        150k
+                    </ion-card-title>
+                    <p>
+                        The most popular industrial group ever
+                    </p>
+                </ion-card-content>
+            </ion-card>
+        </ion-col>
+        <ion-col width-50>
+           <ion-card class="fix-card" (click)="goDetail()">
                 <ion-card-content>
                     <ion-card-title class="fix-all-cate">
                         ALL
@@ -331,7 +331,7 @@
     <hr>
     <ion-row>
         <ion-col width-50>
-            <ion-card class="fix-card">
+            <ion-card class="fix-card" (click)="goDetail()">
                 <img src="http://lorempixel.com/300/200/food/">
                 <ion-card-content>
                     <ion-card-title>
@@ -344,36 +344,7 @@
             </ion-card>
         </ion-col>
         <ion-col width-50>
-            <ion-card class="fix-card">
-                <img src="http://lorempixel.com/300/200/food/">
-                <ion-card-content>
-                    <ion-card-title>
-                        150k
-                    </ion-card-title>
-                    <p>
-                        The most popular industrial group ever
-                    </p>
-                </ion-card-content>
-            </ion-card>
-        </ion-col>
-    </ion-row>
-    <!-- <hr> -->
-    <ion-row>
-        <ion-col width-50>
-            <ion-card class="fix-card">
-                <img src="http://lorempixel.com/300/200/food/">
-                <ion-card-content>
-                    <ion-card-title>
-                        150k
-                    </ion-card-title>
-                    <p>
-                        The most popular industrial group ever
-                    </p>
-                </ion-card-content>
-            </ion-card>
-        </ion-col>
-        <ion-col width-50>
-            <ion-card class="fix-card">
+            <ion-card class="fix-card" (click)="goDetail()">
                 <img src="http://lorempixel.com/300/200/food/">
                 <ion-card-content>
                     <ion-card-title>
@@ -389,7 +360,7 @@
     <!-- <hr> -->
     <ion-row>
         <ion-col width-50>
-            <ion-card class="fix-card">
+            <ion-card class="fix-card" (click)="goDetail()">
                 <img src="http://lorempixel.com/300/200/food/">
                 <ion-card-content>
                     <ion-card-title>
@@ -402,7 +373,36 @@
             </ion-card>
         </ion-col>
         <ion-col width-50>
-            <ion-card class="fix-card">
+            <ion-card class="fix-card" (click)="goDetail()">
+                <img src="http://lorempixel.com/300/200/food/">
+                <ion-card-content>
+                    <ion-card-title>
+                        150k
+                    </ion-card-title>
+                    <p>
+                        The most popular industrial group ever
+                    </p>
+                </ion-card-content>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+    <!-- <hr> -->
+    <ion-row>
+        <ion-col width-50>
+            <ion-card class="fix-card" (click)="goDetail()">
+                <img src="http://lorempixel.com/300/200/food/">
+                <ion-card-content>
+                    <ion-card-title>
+                        150k
+                    </ion-card-title>
+                    <p>
+                        The most popular industrial group ever
+                    </p>
+                </ion-card-content>
+            </ion-card>
+        </ion-col>
+        <ion-col width-50>
+            <ion-card class="fix-card" (click)="goDetail()">
                 <ion-card-content>
                     <ion-card-title class="fix-all-cate">
                         ALL
@@ -416,7 +416,7 @@
     <hr>
     <ion-row>
         <ion-col width-50>
-            <ion-card class="fix-card">
+            <ion-card class="fix-card" (click)="goDetail()">
                 <img src="http://lorempixel.com/300/200/food/">
                 <ion-card-content>
                     <ion-card-title>
@@ -429,36 +429,7 @@
             </ion-card>
         </ion-col>
         <ion-col width-50>
-            <ion-card class="fix-card">
-                <img src="http://lorempixel.com/300/200/food/">
-                <ion-card-content>
-                    <ion-card-title>
-                        150k
-                    </ion-card-title>
-                    <p>
-                        The most popular industrial group ever
-                    </p>
-                </ion-card-content>
-            </ion-card>
-        </ion-col>
-    </ion-row>
-    <!-- <hr> -->
-    <ion-row>
-        <ion-col width-50>
-            <ion-card class="fix-card">
-                <img src="http://lorempixel.com/300/200/food/">
-                <ion-card-content>
-                    <ion-card-title>
-                        150k
-                    </ion-card-title>
-                    <p>
-                        The most popular industrial group ever
-                    </p>
-                </ion-card-content>
-            </ion-card>
-        </ion-col>
-        <ion-col width-50>
-            <ion-card class="fix-card">
+            <ion-card class="fix-card" (click)="goDetail()">
                 <img src="http://lorempixel.com/300/200/food/">
                 <ion-card-content>
                     <ion-card-title>
@@ -474,7 +445,7 @@
     <!-- <hr> -->
     <ion-row>
         <ion-col width-50>
-            <ion-card class="fix-card">
+            <ion-card class="fix-card" (click)="goDetail()">
                 <img src="http://lorempixel.com/300/200/food/">
                 <ion-card-content>
                     <ion-card-title>
@@ -487,7 +458,36 @@
             </ion-card>
         </ion-col>
         <ion-col width-50>
-            <ion-card class="fix-card">
+            <ion-card class="fix-card" (click)="goDetail()">
+                <img src="http://lorempixel.com/300/200/food/">
+                <ion-card-content>
+                    <ion-card-title>
+                        150k
+                    </ion-card-title>
+                    <p>
+                        The most popular industrial group ever
+                    </p>
+                </ion-card-content>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+    <!-- <hr> -->
+    <ion-row>
+        <ion-col width-50>
+            <ion-card class="fix-card" (click)="goDetail()">
+                <img src="http://lorempixel.com/300/200/food/">
+                <ion-card-content>
+                    <ion-card-title>
+                        150k
+                    </ion-card-title>
+                    <p>
+                        The most popular industrial group ever
+                    </p>
+                </ion-card-content>
+            </ion-card>
+        </ion-col>
+        <ion-col width-50>
+            <ion-card class="fix-card" (click)="goDetail()">
                 <ion-card-content>
                     <ion-card-title class="fix-all-cate">
                         ALL

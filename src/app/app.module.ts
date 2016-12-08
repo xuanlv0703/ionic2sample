@@ -17,6 +17,7 @@ import { SetmenuPage } from '../pages/setmenu/setmenu';
 import { DishPage } from '../pages/dish/dish';
 import { ProductPage } from '../pages/product/product';
 import { HomePage } from '../pages/home/home';
+import { SetmenuDetailPage } from '../pages/setmenu-detail/setmenu-detail';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { HomePage } from '../pages/home/home';
     SetmenuPage,
     DishPage,
     ProductPage,
-    HomePage
+    HomePage,
+    SetmenuDetailPage
   ],
   imports: [
     IonicModule.forRoot(MyApp,{tabsPlacement:'top'})
@@ -51,7 +53,8 @@ import { HomePage } from '../pages/home/home';
     SetmenuPage,
     DishPage,
     ProductPage,
-    HomePage
+    HomePage,
+    SetmenuDetailPage
   ],
   providers: [GithubUsers]
 })

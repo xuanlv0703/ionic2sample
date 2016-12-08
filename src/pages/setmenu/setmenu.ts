@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { SetmenuDetailPage } from '../setmenu-detail/setmenu-detail';
 
 /*
   Generated class for the Setmenu page.
@@ -21,6 +22,10 @@ export class SetmenuPage {
 
     onSlideChanged() {
     	console.log('slider change.')
+  }
+
+  goDetail(){
+    this.navCtrl.push(SetmenuDetailPage);
   }
 
 }
