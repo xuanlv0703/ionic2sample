@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController,ModalController } from 'ionic-angular';
 import { SetmenuDetailPage } from '../setmenu-detail/setmenu-detail';
-
+import { SetmenuFilterPage } from '../setmenu-filter/setmenu-filter';
 /*
   Generated class for the Setmenu page.
 
@@ -13,8 +13,9 @@ import { SetmenuDetailPage } from '../setmenu-detail/setmenu-detail';
   templateUrl: 'setmenu.html'
 })
 export class SetmenuPage {
+  excludeTracks = [];
 
-  constructor(public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController,public modalCtrl: ModalController) {}
 
   ionViewDidLoad() {
     console.log('Hello SetmenuPage Page');
@@ -26,6 +27,23 @@ export class SetmenuPage {
 
   goDetail(){
     this.navCtrl.push(SetmenuDetailPage);
+  }
+
+   updateSchedule() {
+    console.log(this.excludeTracks);
+  }
+
+  presentFilter(){
+      let modal = this.modalCtrl.create(SetmenuFilterPage, this.excludeTracks);
+    modal.present();
+
+    modal.onWillDismiss((data: any[]) => {
+      if (data) {
+        this.excludeTracks = data;
+        this.updateSchedule();
+      }
+       console.log('close modal.')
+    });
   }
 
 }

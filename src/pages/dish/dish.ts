@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { DishDetailPage } from '../dish-detail/dish-detail';
 
 /*
   Generated class for the Dish page.
@@ -17,6 +18,10 @@ export class DishPage {
 
   ionViewDidLoad() {
     console.log('Hello DishPage Page');
+  }
+
+  goDetail(){
+    this.navCtrl.push(DishDetailPage);
   }
 
 }

@@ -18,6 +18,8 @@ import { DishPage } from '../pages/dish/dish';
 import { ProductPage } from '../pages/product/product';
 import { HomePage } from '../pages/home/home';
 import { SetmenuDetailPage } from '../pages/setmenu-detail/setmenu-detail';
+import { DishDetailPage } from '../pages/dish-detail/dish-detail';
+import { SetmenuFilterPage } from '../pages/setmenu-filter/setmenu-filter';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { SetmenuDetailPage } from '../pages/setmenu-detail/setmenu-detail';
     DishPage,
     ProductPage,
     HomePage,
-    SetmenuDetailPage
+    SetmenuDetailPage,
+    DishDetailPage,
+    SetmenuFilterPage
   ],
   imports: [
     IonicModule.forRoot(MyApp,{tabsPlacement:'top'})
@@ -54,7 +58,9 @@ import { SetmenuDetailPage } from '../pages/setmenu-detail/setmenu-detail';
     DishPage,
     ProductPage,
     HomePage,
-    SetmenuDetailPage
+    SetmenuDetailPage,
+    DishDetailPage,
+    SetmenuFilterPage
   ],
   providers: [GithubUsers]
 })
