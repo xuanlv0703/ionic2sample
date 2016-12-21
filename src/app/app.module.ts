@@ -21,6 +21,26 @@ import { SetmenuDetailPage } from '../pages/setmenu-detail/setmenu-detail';
 import { DishDetailPage } from '../pages/dish-detail/dish-detail';
 import { SetmenuFilterPage } from '../pages/setmenu-filter/setmenu-filter';
 
+import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
+
+const cloudSettings: CloudSettings = {
+  'core': {
+    'app_id': '31ce3214',
+  },
+  'push': {
+    'sender_id': '763535135526',
+    'pluginConfig': {
+      'ios': {
+        'badge': true,
+        'sound': true
+      },
+      'android': {
+        'iconColor': '#343434'
+      }
+    }
+  }
+};
+
 @NgModule({
   declarations: [
     MyApp,
@@ -41,7 +61,8 @@ import { SetmenuFilterPage } from '../pages/setmenu-filter/setmenu-filter';
     SetmenuFilterPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp,{tabsPlacement:'top'})
+    IonicModule.forRoot(MyApp,{tabsPlacement:'top'}),
+    CloudModule.forRoot(cloudSettings)
   ],
   bootstrap: [IonicApp],
   entryComponents: [

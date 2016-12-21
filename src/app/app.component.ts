@@ -11,6 +11,10 @@ import { UsersPage } from '../pages/users/users';
 import { ReposPage } from '../pages/repos/repos';
 import { OrganisationsPage } from '../pages/organisations/organisations';
 import { TabsPage } from '../pages/tabs/tabs';
+import {
+  Push,
+  PushToken
+} from '@ionic/cloud-angular';
 
 
 @Component({
@@ -23,13 +27,17 @@ export class MyApp {
   rootPage: any;
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform,  public menu: MenuController) {
+  constructor(public platform: Platform,  public menu: MenuController,public push: Push) {
       this.pages = [
       { title: 'Users', component: UsersPage },
       { title: 'Repos', component: ReposPage },
       { title: 'Profile', component: ProfilePage },
       { title: 'Organisations', component: OrganisationsPage }
     ];
+
+
+
+
     this.initializeApp();
     // StatusBar.styleDefault();
     // Splashscreen.hide();
@@ -40,7 +48,18 @@ export class MyApp {
   initializeApp() {
     let env = this;
     env.platform.ready().then(() => {
+
        console.log('ready....')
+           this.push.register().then((t: PushToken) => {
+  return this.push.saveToken(t);
+}).then((t: PushToken) => {
+  console.log('Token saved:', t.token);
+});
+
+this.push.rx.notification()
+  .subscribe((msg) => {
+    alert(msg.title + ': ' + msg.text);
+  });
          // set our app's pages
   
        // Here we will check if the user is already logged in
